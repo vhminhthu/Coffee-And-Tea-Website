@@ -1,0 +1,741 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fdf6f9;
+}
+
+.circle{
+margin-right: 20px;
+}
+
+.container-table-1{
+  background-color: #fff;
+  border-radius: 10px;
+  padding:40px 50px;
+  position: absolute;
+  transform: translateX(10%);  /* do not touch !!! */
+  box-sizing: border-box;
+  top: 200px; 
+  left: 61%;
+  box-shadow: 0 0 10px rgba(255, 203, 241, 0.7);
+  display: flex;
+  /*flex-direction: column;*/
+  align-items: center;
+}
+
+.incr{
+  background-color: white;
+  border-radius: 5px;
+  padding: 4px 10px; /* giữ nguyeen */
+    font-size:13px ;
+    color:#828282;
+     font-weight:15px;
+ margin-left: 35px;
+}
+
+
+
+ #sort{
+    width: 81%;
+    padding: 3px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+   
+  }
+  
+
+#status_form #status_1{
+  width: 79%;
+  padding: 3px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+#scrollbar{
+    border:3px solid #ffc0d9;
+    width: 583px;
+    height: 300px;
+   margin-left: 300px; 
+   border-radius: 5px;
+   margin-top: -310px; 
+    overflow-x:auto;
+    overflow-y:auto;
+    scrollbar-width: thin;
+    scrollbar-color: #f779ad #f8f8f8; /* Track color, thumb color */
+}
+
+.scrollbar-content{
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+border-radius: 10px;
+}
+
+
+.container-calendar{
+  position: absolute;
+  transform: translateX(10%);  /* do not touch !!! */
+  box-sizing: border-box;
+  top: 100px; 
+  left: 2%;
+ 
+}
+.container-calendar *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  h1 {
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    font-weight: 600;
+  }
+  .calendar {
+    margin: auto;
+    width: 100%;
+    max-width: 400px;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 203, 241, 0.7);
+  
+  }
+  .calendar header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .calendar nav {
+    display: flex;
+    align-items: center;
+  }
+  .calendar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .calendar ul li {
+    width: calc(100% / 7);
+    margin-top: 25px;
+    position: relative;
+    z-index: 2;
+  }
+  #prev,
+  #next {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  #prev::before,
+  #next::before {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    border-color: #ccc;
+  }
+  #next::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  #prev::before {
+    transform: translate(-50%, -50%) rotate(-135deg);
+  }
+  #prev:hover::before,
+  #next:hover::before {
+    border-color: #000;
+  }
+  .days {
+    font-weight: 600;
+  }
+  .dates li.today {
+    color: #fff;
+  }
+  .dates li.today::before {
+    content: "";
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffc0d9;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .dates li.inactive {
+    color: #ccc;
+  }
+/* */
+
+.content-admin{
+    position: absolute;  
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        width: 70%; 
+        top: 30px; /* 50px */ 
+        left: 60%; 
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        height: 500px; 
+    background-color: #ffffff;
+}
+.info-admin{
+    width: 100%;
+position: absolute;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: #f799c0;
+    border-radius: 4px;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 180px 300px 140px;  
+   grid-gap: 3rem;
+    
+    margin-top: 20px;
+   margin-left: 30px;
+   
+}
+/*
+   
+*/
+
+/* điều chỉnh thanh navigaton  */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 180px;   
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    transition: all 0.5s linear;
+    background: #000000;
+
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover,
+.active {
+    background: rgb(66, 67, 67);
+    margin-right: -1rem; 
+    margin-left: -1rem;  
+}
+
+.menu a {
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: auto;   /*0 da chinh lai hom 10/3*/ 
+    width: 90%;
+}
+/* chỉnh cái sub-menu */
+
+
+.sub-menu {
+    display: block;
+    
+}
+.sub-item{
+  margin-block: -15px;
+}
+
+/* chỉnh bảng đổ dữ liệu */
+table.content1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.content1 th {
+    background-color: rgb(255, 192, 217);
+    color: #000000;
+}
+
+table.content1 th, table.content1 td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table.content1 tr:hover {
+    background-color: #f7eaf3;
+}
+
+
+.content1 a {
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.content1 a:hover {
+    opacity: 0.8;
+}
+
+
+.delete-button i,
+.edit-button i {
+    font-size: 22px;
+}
+/* chỉnh div phân trang */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px; /* Khoảng cách giữa nội dung và thanh phân trang */
+    background-color: #ffffff;
+    height: 40px;
+}
+
+.pagination a {
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.page{
+    background-color: #000000;
+    color:white ;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    border-radius: 20%;
+    margin-right: 7px;
+}
+
+
+/* chỉnh form thêm và sửa  sản phẩm  */
+#add_form ,#edit_form ,#add_form_more,#edit_form_more{
+        background-color:     rgb(255, 255, 255);    
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+        max-width: 550px;
+        width: auto; /*100% */
+        position: absolute;
+        top: 30px; /* 50px */ 
+        left: 60%; 
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        height: 500px; 
+    }
+
+#add_form_2, #edit_form_2{
+
+    background-color:     rgb(255, 255, 255);    
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
+    max-width: 550px;
+    width: 100%;
+    position: absolute;
+    top: 100px; 
+    left: 60%; 
+    transform: translateX(-50%);
+    box-sizing: border-box;
+    height: 270px; 
+}      
+
+#add_form p , 
+#edit_form p  ,
+#add_form_2 p,
+#edit_form_2 p ,
+#add_form_more,
+#edit_form_more{ 
+        margin-bottom: 8px;  
+      }
+  
+#add_form label  , #edit_form label , #add_form_2 label , #edit_form_2 label,#add_form_more label,#edit_form_more label {
+   
+ margin-bottom: 3px;  
+font-size: 14px;
+      }
+
+      #add_form p label:not([for="gia_S"]):not([for="gia_M"]):not([for="gia_L"]):not([for="TinhTrang"]):not([for="PhanTramSPKM"]),
+      #add_form div label:not([for="gia_S"]):not([for="gia_M"]):not([for="gia_L"]):not([for="TinhTrang"]):not([for="PhanTramSPKM"]) {
+          display: block;
+      }
+
+      #edit_form p label:not([for="gia_S"]):not([for="gia_M"]):not([for="gia_L"]):not([for="TinhTrang"]):not([for="PhanTramSPKM"]),
+      #edit_form div label:not([for="gia_S"]):not([for="gia_M"]):not([for="gia_L"]):not([for="TinhTrang"]):not([for="PhanTramSPKM"]) {
+          display: block;
+      }
+      
+
+      
+#add_form #IdSP,#edit_form #IdSP,#add_form_2 #IdLoai,
+#add_form #TenSP,#edit_form #TenSP,#add_form_2 #TenLoai,
+#add_form  #IdLoai,#edit_form #IdLoai, #edit_form_2 #IdLoai,
+#add_form  #SoLuong,#edit_form #SoLuong, #edit_form_2 #TenLoai,
+#add_form_more  #SoLuong,#add_form_more #IdSP,#add_form_more #TenSP,#add_form_more #IdLoai
+,#edit_form_more  #SoLuong,#edit_form_more #IdSP,#edit_form_more #TenSP,#edit_form_more #IdLoai
+,#add_form_more #GiaTheoSize,#edit_form_more #GiaTheoSize
+       {
+      width: 85%;  /* chỉnh thanh nhập  */
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+     margin-right: auto;
+      }
+      
+      #edit_form #gia_S,
+      #edit_form #gia_M,
+      #edit_form #gia_L{
+        width: 15%;
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+     margin-right: auto;
+      }
+
+      #add_form #gia_S,
+      #add_form #gia_M,
+      #add_form #gia_L{
+          width: 15%;
+          padding: 6px;
+          border-radius: 10px;
+          border: 1px solid #ddd;
+          margin-right: auto;
+      }
+      
+      #add_form #TinhTrang,
+      #add_form #PhanTramSPKM {
+        width: 20%;
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        margin-right: 30px;
+      }
+
+      #edit_form #TinhTrang,
+      #edit_form #PhanTramSPKM {
+        width: 20%;
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        margin-right: 30px;
+      }
+      
+      #add_form_more #TinhTrang{
+        width: 40%;
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        margin-right: 30px;
+      }
+      #edit_form_more #TinhTrang{
+        width: 40%;
+        padding: 6px;
+        border-radius: 10px;
+        border: 1px solid #ddd;
+        margin-right: 30px;
+      }
+
+#add_form #themsanpham
+,#edit_form #suasanpham 
+,#add_form_2 #themmasanpham
+,#edit_form_2 #suamasanpham,
+#add_form_more #monthem,
+#edit_form_more #monthemsua
+{
+        background-color: #FFEEF5;
+        color: #000000;
+        border-radius: 10px;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        width: 30%;
+         float: right;
+         margin-top: -50px; /*-50px*/ 
+         font-weight: bold;
+         font-size: 15px;
+      }
+    
+    
+#add_form #themsanpham:hover
+,#edit_form #suasanpham:hover
+,#add_form_2 #themmasanpham:hover
+,#edit_form_2 #suamasanpham:hover {
+        background-color: #FEC8D8;
+        transition: all 0.5s ease-in-out;
+    }
+    
+  
+    /* chỉnh các thẻ có icon */
+main{
+
+        position: absolute;
+       
+        
+       }
+
+
+.cards{
+display: grid;
+ grid-template-columns: repeat(3,270px);  
+grid-gap: 3rem;
+margin-left: 300px; 
+margin-top: -530px;
+}
+
+.card{
+   background-color: #ffe5ec;
+    padding: 1rem .5rem;
+border-radius: 7px;
+display: flex;
+  flex-direction: column;
+align-items: center; 
+
+}
+
+.card-icon{
+    text-align: center;
+    display: grid;
+    place-items: center;
+    height: 55px;
+    width: 55px;
+    background-color: #fff;
+    font-size: 3rem;
+   border-radius: 50%;
+   display: inline-block;  
+}
+
+
+    /* chỉnh biểu đồ  */
+#chart_div {
+        width: 583px;
+        height: 300px;
+       margin-left: 300px; 
+       border-radius: 10px;
+       margin-top: -310px; 
+       box-shadow: 0 0 0 4px rgb(255, 255, 255); 
+    }
+
+.leaderboard {
+        width: 300px; 
+        height: 287px;
+        padding: 10px; 
+        background-color: white;
+        margin-left: 932px; 
+        margin-top: -309px; 
+        border-radius: 10px;
+    }
+
+/* chỉnh bảng xếp hạng  */
+.block {
+        display: grid;
+        grid-template-columns: 40px 150px 50px;
+        align-items: center;
+        gap: 10px;
+       
+    }
+
+.img {
+        width: 20px; 
+        height: 20px;
+        background-color: #ddd; 
+    }
+
+.tensp, .giathanh {
+        margin: 0;
+    }
+
+.giathanh {
+        text-align: right;
+    }
+/*  chỉnh sửa tìm kiếm */
+.tim_kiem{
+    width: 40%;
+    padding: 7px;
+    border-radius: 10px;
+    border: none;
+margin-left: 10px;
+}
+
+.tim_kiem:focus{
+    outline: none;
+}
+
+.find{
+    background-color: #FFEEF5;
+    color: #000000;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 8%;
+     font-weight: bold;
+     font-size: 10px;
+}
+
+
+
+.cart-main{
+    margin: 0 5% 2% 5%;
+    display: flex;
+    justify-content: space-between;
+ 
+}
+
+.cart-main-left{
+    width: 1000px;   /* 75% */
+    height: auto;
+    padding:10px;
+}
+
+
+
+/* phan quanli hoadon */
+.cart-main-left-list{
+    width: auto;   /*75%*/
+    height: auto;
+  
+}
+
+
+
+.cart-main-left-text{
+   /* font-weight: 600;   chữ đậm hơn */
+    background-color:#f799c0;
+    font-size: 16px;
+    font-family: rbt;
+    display: grid;
+    grid-template-columns:  50px 70px 100px 100px 120px 120px 120px 130px auto;
+    column-gap: 22px;
+    padding: 10px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+
+/*
+.cart-main-left-list{
+    background-color: #FFEEF5;
+    margin-top: 3%;
+    padding: 10px;
+    border-radius: 20px;
+   
+}
+*/
+.cart-main-left-list-sp{
+    border: 2px solid #FFC0D9;
+    display: grid;
+    grid-template-columns:  50px 50px 110px 100px 120px 120px 120px 100px auto;
+    column-gap: 24px;
+    align-items: center;
+    font-family: rbt;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 10px;
+padding: 15px;
+transition: transform 0.7s ease; 
+}
+
+.cart-main-left-list-sp:hover {
+    transform: scale(0.9); 
+}
+
+
+.cart-main-left-list-sp-name a{
+    text-decoration: none;
+    color: black;
+    font-family: rbt;
+}
+
+.cart-main-left-text-CTHD {
+    /* font-weight: 600;   chữ đậm hơn */
+     background-color:#f799c0;
+     font-size: 16px;
+     font-family: rbt;
+     display: grid;
+     grid-template-columns:  70px 100px 100px 100px 100px 120px auto;
+     column-gap: 22px;
+     padding: 10px;
+     border-radius: 20px;
+     text-align: center;
+ }
+
+.cart-main-left-list-sp-CTHD{
+  /*  border: 3px solid #000000; */
+ 
+    background-color: #fce1ee;
+    display: grid;
+    grid-template-columns:  70px 70px 110px 100px 100px 120px auto;
+    column-gap: 24px;
+    align-items: center;
+    font-family: rbt;
+    border-radius: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin-top: 10px;
+padding: 20px;
+transition: transform 0.7s ease; 
+color: #0c0c0c;
+}
+
+.cart-main-left-list-sp-CTHD:hover {
+    transform: scale(0.9); 
+}
+
+
+.cart-main-left-list-sp-name-CTHD a{
+    text-decoration: none;
+    color: black;
+    font-family: rbt;
+}
+

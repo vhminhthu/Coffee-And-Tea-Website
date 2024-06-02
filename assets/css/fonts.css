@@ -1,0 +1,19 @@
+@font-face {
+    font-family: rbt;
+    src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: rbtm;
+    src: url(../fonts/Roboto/Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: rbtb;
+    src: url(../fonts/Roboto/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: rbtbl;
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+}
